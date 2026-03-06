@@ -1,4 +1,4 @@
-# hao-backprop-test
+# hello_world
 
 A simple Express.js-based Node.js server that serves two HTTP endpoints. This project demonstrates basic routing with Express.js, returning plain-text responses.
 
@@ -13,7 +13,7 @@ A simple Express.js-based Node.js server that serves two HTTP endpoints. This pr
 
    ```bash
    git clone <repository-url>
-   cd hao-backprop-test
+   cd hello_world
    ```
 
 2. Install dependencies:
@@ -42,8 +42,8 @@ The server will start at **http://127.0.0.1:3000/**.
 
 | Method | Path       | Response          | Content-Type | Status |
 |--------|------------|-------------------|--------------|--------|
-| GET    | `/`        | `Hello, World!\n` | `text/plain` | 200    |
-| GET    | `/evening` | `Good evening`    | `text/plain` | 200    |
+| GET    | `/`        | `Hello, World!\n` | `text/plain; charset=utf-8` | 200    |
+| GET    | `/evening` | `Good evening`    | `text/plain; charset=utf-8` | 200    |
 
 ## License
 
