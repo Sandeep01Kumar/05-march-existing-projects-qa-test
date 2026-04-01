@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/', defaults={'path': ''}, methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'])
 @app.route('/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'])
 def catch_all(path):
-    return Response('Hello, World!\n', status=200, mimetype='text/plain')
+    return Response('Hello, World!\n', status=200, content_type='text/plain')
 
 
 if __name__ == '__main__':
