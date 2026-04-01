@@ -3,7 +3,7 @@ from flask import Flask, Response
 hostname = '127.0.0.1'
 port = 3000
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder=None)
 
 
 @app.route('/', defaults={'path': ''}, methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'])
