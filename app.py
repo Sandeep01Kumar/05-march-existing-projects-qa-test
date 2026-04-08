@@ -12,13 +12,27 @@ from flask import Flask, Response
 # Flask application instance
 app = Flask(__name__)
 
-# Server configuration constants — match original Node.js server.js values exactly
+# Server configuration constants — match original
+# Node.js server.js values exactly
 hostname = '127.0.0.1'
 port = 3000
 
 
-@app.route('/', defaults={'path': ''}, methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'])
-@app.route('/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'])
+# All standard HTTP methods for catch-all routing
+_METHODS = [
+    'GET', 'POST', 'PUT', 'DELETE',
+    'PATCH', 'HEAD', 'OPTIONS',
+]
+
+
+@app.route(
+    '/', defaults={'path': ''},
+    methods=_METHODS,
+)
+@app.route(
+    '/<path:path>',
+    methods=_METHODS,
+)
 def catch_all(path):
     """Handle every HTTP request with an identical plain-text response.
 
